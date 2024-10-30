@@ -8,9 +8,9 @@ class Vehiculo(models.Model):
         ('toyota', 'Toyota'),
     ]
     CATEGORIAS = [
-        ('particular', 'Particular'),
-        ('transporte', 'Transporte'),
-        ('carga', 'Carga'),
+        ('PARTICULAR', 'PARTICULAR'),
+        ('TRANSPORTE', 'TRANSPORTE'),
+        ('CARGA', 'CARGA'),
     ]
     
     marca = models.CharField(max_length=20, blank=False, null=False, choices=MARCAS, default='Ford')

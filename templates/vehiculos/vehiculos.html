@@ -4,23 +4,53 @@
 {% block contenido %}
 
 <main class="container">
-    <section>
-        <h1 class="text-center py-5">{{titulo}}</h1>
+    <section id="listado-productos">
+        <h3 class="text-center py-3">Listado de Vehiculos</h3>
+
+        {% if vehiculos %}
+            <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Serial Carroceria</th>
+                    <th scope="col">Serial Motor</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Condicion de Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vehiculo in vehiculos %}
+                <tr>
+                    <td>{{vehiculo.marca|upper}}</td>
+                    <td>{{vehiculo.modelo}}</td>
+                    <td>{{vehiculo.serial_carroceria}}</td>
+                    <td>{{vehiculo.serial_motor}}</td>
+                    <td>{{vehiculo.categoria}}</td>
+                    <td>{{vehiculo.precio}}</td>
+                    {% if vehiculo.precio < 10000 %}
+                        <td>Bajo</td>
+                    {% endif %}
+                    {% if vehiculo.precio > 9999 and vehiculo.precio < 30000 %}
+                        <td>Medio</td>
+                    {% endif %}
+                    {% if vehiculo.precio > 30000 %}
+                        <td>Alto</td>
+                    {% endif %}
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="text-center">No existen vehiculos disponibles.</p>
+        {% endif %}
     </section>
 
-    <section>
 
-
-        
-        <div class="row g-3 justify-content-center">
-            {% for vehiculo in vehiculos %}
-            <div class="col-12 col-md-4 col-lg-3">
-                <p> {{vehiculo.marca}}</p>
-            </div>
-            {% endfor %}
-        </div>
-    </section>
 </main>
+
 
 
 {% endblock contenido %}
