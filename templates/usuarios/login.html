@@ -4,20 +4,23 @@
 {% block contenido %}
 
 <main class="container">
-    <section>
-        <h1 class="text-center py-5">Ingreso de usuario</h1>
-    </section>
-    <section>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-5 col-lg-4">
-                <form method="post">
-                    {% csrf_token %}
-                    {{form}}
-                    <input type="submit" value="Iniciar sesión" class="btn btn-primary">
-                </form>
+        <section >
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-5 col-lg-4">
+                    <section>
+                        <h1 class="text-center py-5">Acceso al Sistema</h1>
+                    </section>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="text-nowrap" style="width: 24em;">
+                            {{form}}
+                            <input type="submit" value="Acceder" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 </main>
+</body>
 
 {% endblock contenido %}

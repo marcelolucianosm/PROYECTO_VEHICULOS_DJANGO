@@ -2,19 +2,29 @@
 
 
 {% block contenido %}
-<header>
-    <h1>Registro Usuario</h1>
-</header>
 
-<main>
-    <section>
-        <form method="post">
-            {% csrf_token %}
-            {{form}}
+    <main class="container py-5">
+        
+        <section >
+            <div class="row justify-content-center">
+                
+                <div class="col-12 col-md-5 col-lg-4">
+                    <section>
+                        <h1 >Registro de Usuario</h1>
+                    </section>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="text-nowrap" style="width: 24rem;">
+                        {{form}}
+                    
+                        <input type="submit" value="Registrar" class="btn btn-success">
+                    </div>
+                </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-            <input type="submit" value="Crear usuario">
-        </form>
-    </section>
-</main>
+
 
 {% endblock contenido %}
