@@ -1,6 +1,9 @@
 from django.db import models
 
 class Vehiculo(models.Model):
+    class Meta:
+        permissions = (('visualizar_catalogo', 'Ver Catalogo Vehiculos'),
+                    ('add_vehiculomodel', 'Agregar Vehiculo'),)
     MARCAS = [
         ('chevrolet', 'Chevrolet'),
         ('fiat', 'Fiat'),

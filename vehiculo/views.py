@@ -11,6 +11,7 @@ class VehiculosView(ListView):
     model = Vehiculo
     template_name = "vehiculos/vehiculos.html"
     context_object_name = 'vehiculos'
+    permission_required = 'vehiculo.visualizar_catalogo'
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -22,7 +23,7 @@ class VehiculoAddView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     template_name = "vehiculos/add_vehiculo.html"
     fields = ['marca', 'modelo','serial_carroceria','serial_motor','categoria','precio','fecha_creacion','fecha_modificacion']
     success_url = reverse_lazy('vehiculo')
-    permission_required = 'vehiculo.add_vehiculo'
+    permission_required = 'vehiculo.add_vehiculomodel'
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
