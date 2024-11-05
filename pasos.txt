@@ -1,0 +1,6 @@
+El usuario de pruebas que no es del staff   es el siguiente :   
+
+usuario = marcelo  
+clave = marce123456
+
+Tiene activados ambos permisos solicitados en la rubrica.
