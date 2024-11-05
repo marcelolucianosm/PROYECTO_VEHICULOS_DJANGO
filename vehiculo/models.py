@@ -5,10 +5,10 @@ class Vehiculo(models.Model):
         permissions = (('visualizar_catalogo', 'Ver Catalogo Vehiculos'),
                     ('add_vehiculomodel', 'Agregar Vehiculo'),)
     MARCAS = [
-        ('chevrolet', 'Chevrolet'),
-        ('fiat', 'Fiat'),
-        ('ford', 'Ford'),
-        ('toyota', 'Toyota'),
+        ('CHEVROLET', 'CHEVROLET'),
+        ('FIAT', 'FIAT'),
+        ('FORD ', 'FORD'),
+        ('TOYOTA', 'TOYOTA'),
     ]
     CATEGORIAS = [
         ('PARTICULAR', 'PARTICULAR'),

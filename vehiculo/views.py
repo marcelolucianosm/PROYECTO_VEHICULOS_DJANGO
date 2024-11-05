@@ -12,6 +12,7 @@ class VehiculosView(ListView):
     template_name = "vehiculos/vehiculos.html"
     context_object_name = 'vehiculos'
     permission_required = 'vehiculo.visualizar_catalogo'
+    ordering = ['precio']
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
