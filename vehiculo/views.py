@@ -22,7 +22,7 @@ class VehiculosView(ListView):
 class VehiculoAddView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = Vehiculo
     template_name = "vehiculos/add_vehiculo.html"
-    fields = ['marca', 'modelo','serial_carroceria','serial_motor','categoria','precio','fecha_creacion','fecha_modificacion']
+    fields = ['marca', 'modelo','serial_carroceria','serial_motor','categoria','precio']
     success_url = reverse_lazy('vehiculo')
     permission_required = 'vehiculo.add_vehiculomodel'
     

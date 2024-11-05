@@ -1,21 +1,20 @@
 {% extends "layouts/base.html" %}
-
 {% block contenido %}
 
-    <main class="container">
+    <main class="container-fluid">
         <section>
-            <h1 class="text-center py-5">Agrega Vehiculo</h1>
+            <h1 class="text-left py-5">Agrega Vehiculo</h1>
         </section>
 
         <section>
 
-            <div class="row justify-content-center">
+            <div class="row justify-content-left">
                 <div class="col-12 col-md-5">
                     <form method="post">
                         {% csrf_token %}
                         {{form}}
-                        <div>
-                            <input type="submit" class="btn btn-primary" value="Enviar"> 
+                        <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-primary btn-md" type="submit">Enviar</button>
                         </div>
                     </form>
                 </div>

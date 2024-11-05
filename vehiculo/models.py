@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 
 class Vehiculo(models.Model):
@@ -22,8 +23,8 @@ class Vehiculo(models.Model):
     serial_motor = models.CharField(max_length=50, blank=False, null=False)
     categoria = models.CharField(max_length=20, blank=False, null=False, choices=CATEGORIAS, default='Particular')
     precio = models.FloatField(blank=False, null=False,)
-    fecha_creacion = models.DateTimeField(blank=False, null=False)
-    fecha_modificacion = models.DateTimeField(blank=False, null=False)
+    fecha_creacion = models.DateTimeField(auto_now_add=True, blank=True)
+    fecha_modificacion = models.DateTimeField(auto_now_add=True, blank=True)
 
     
     def __str__(self) -> str:
