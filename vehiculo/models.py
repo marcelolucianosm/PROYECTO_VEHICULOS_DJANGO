@@ -7,7 +7,7 @@ class Vehiculo(models.Model):
     MARCAS = [
         ('CHEVROLET', 'CHEVROLET'),
         ('FIAT', 'FIAT'),
-        ('FORD ', 'FORD'),
+        ('FORD', 'FORD'),
         ('TOYOTA', 'TOYOTA'),
     ]
     CATEGORIAS = [
