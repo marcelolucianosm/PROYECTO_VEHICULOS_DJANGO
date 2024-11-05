@@ -21,7 +21,7 @@ class Vehiculo(models.Model):
     serial_carroceria = models.CharField(max_length=50, blank=False, null=False)
     serial_motor = models.CharField(max_length=50, blank=False, null=False)
     categoria = models.CharField(max_length=20, blank=False, null=False, choices=CATEGORIAS, default='Particular')
-    precio = models.PositiveIntegerField(blank=False, null=False,)
+    precio = models.FloatField(blank=False, null=False,)
     fecha_creacion = models.DateTimeField(blank=False, null=False)
     fecha_modificacion = models.DateTimeField(blank=False, null=False)
 
